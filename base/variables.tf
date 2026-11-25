@@ -14,3 +14,8 @@ variable "password" {
   sensitive   = true
   description = "Dummy API password"
 }
+
+variable "security_manager_username" {
+  type    = string
+  default = "enmshtuz"
+}
