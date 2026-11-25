@@ -3,3 +3,4 @@
 **/*.tfstate.backup
 /images/
 /lab_rest_api/
+**/.terraform.lock.hcl/
