@@ -1,0 +1,5 @@
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.backup
+/images/
+/lab_rest_api/
