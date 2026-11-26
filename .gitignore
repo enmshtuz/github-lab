@@ -4,3 +4,6 @@
 /images/
 /lab_rest_api/
 **/.terraform.lock.hcl/
+base/terraform.tfstate.1795633646.backup
+base/terraform.tfstate.1795634423.backup
+repos/terraform.tfstate.1795634423.backup
