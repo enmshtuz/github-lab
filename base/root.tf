@@ -5,6 +5,9 @@ terraform {
       version = "~> 6.0"
     }
   }
+  backend "pg" {
+    conn_str = "postgres://tfstate:tf@localhost/base?sslmode=disable"
+  }
 }
 
 provider "github" {
