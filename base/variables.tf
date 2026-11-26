@@ -19,8 +19,3 @@ variable "security_manager_username" {
   type    = string
   default = "enmshtuz"
 }
-
-variable "org_name" {
-  type    = string
-  default = "epam-tf"
-}
