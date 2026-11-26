@@ -18,7 +18,9 @@ resource "github_membership" "org_member" {
 
 # 4. Add the member to one of the teams (e.g., devops-team)
 resource "github_team_membership" "devops_team_member" {
+  for_each = toset(var.devops_team_membership)
+
   team_id  = github_team.devops_team.id
-  username = github_membership.org_member.username
+  username = each.key
   role     = "member"
 }

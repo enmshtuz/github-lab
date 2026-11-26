@@ -19,3 +19,21 @@ variable "security_manager_username" {
   type    = string
   default = "enmshtuz"
 }
+
+variable "member1" {
+  type    = string
+  default = "danielazizyan"
+}
+
+variable "member2" {
+  type    = string
+  default = "enmshtuz"
+}
+
+variable "devops_team_membership" {
+  type = list(string)
+}
+
+variable "security_team_membership" {
+  type = list(string)
+} 

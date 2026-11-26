@@ -22,9 +22,9 @@ resource "github_organization_role_user" "security_manager_user" {
 
 # 4. Add the user to the security-team
 resource "github_team_membership" "security_team_member" {
-  team_id  = github_team.security_team.id
-  username = var.security_manager_username
-  role     = "member"
+  for_each = toset(var.security_team_membership)
 
-  depends_on = [github_organization_role_user.security_manager_user]
+  team_id  = github_team.security_team.id
+  username = each.key
+  role     = "member"
 }
