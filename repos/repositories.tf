@@ -19,32 +19,20 @@ resource "github_repository_file" "codeowners" {
   content    = "* @epam-tf/security-team"
 }
 
-data "github_team" "nodejs_team" {
-  slug = "nodejs-team"
-}
-
-data "github_team" "security_team" {
-  slug = "security-team"
-}
-
-data "github_team" "devops_team" {
-  slug = "devops-team"
-}
-
 resource "github_team_repository" "nodejs_team" {
-  team_id    = data.github_team.nodejs_team.id
+  team_id    = local.nodejs_team_slug
   repository = github_repository.tf_lab_app.name
   permission = "push"
 }
 
 resource "github_team_repository" "security_team" {
-  team_id    = data.github_team.security_team.id
+  team_id    = local.security_team_slug
   repository = github_repository.tf_lab_app.name
   permission = "push"
 }
 
 resource "github_team_repository" "devops_team" {
-  team_id    = data.github_team.devops_team.id
+  team_id    = local.devops_team_slug
   repository = github_repository.tf_lab_app.name
   permission = "pull"
 }
