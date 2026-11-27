@@ -36,4 +36,24 @@ variable "devops_team_membership" {
 
 variable "security_team_membership" {
   type = list(string)
-} 
+}
+
+variable "team1" {
+  type    = string
+  default = "devops-team"
+}
+
+variable "team2" {
+  type    = string
+  default = "security-team"
+}
+
+variable "team3" {
+  type    = string
+  default = "nodejs-team"
+}
+
+variable "organization_secret_names" {
+  type    = list(string)
+  default = []
+}

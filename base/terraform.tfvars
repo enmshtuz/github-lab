@@ -1,0 +1,1 @@
+organization_secret_names = ["USERNAME", "PASSWORD"]

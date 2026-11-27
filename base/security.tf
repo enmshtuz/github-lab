@@ -1,6 +1,6 @@
 # 1. Create the security team
 resource "github_team" "security_team" {
-  name    = "security-team"
+  name    = var.team2
   privacy = "closed"
 }
 
